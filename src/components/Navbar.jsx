@@ -1,33 +1,34 @@
+import { NavLink } from "react-router-dom";
+// import { useSelector } from "react-redux";
+
 export default function Navbar() {
+  /*  const isAuthentificated = useSelector(
+    (state) => state.user.isAuthentificated
+  );
+  console.log(isAuthentificated); */
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <span className="navbar-brand">Navbar</span>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <nav
+      className="navbar navbar-expand-lg p-3 "
+      style={{ backgroundColor: "#C5C5A9" }}
+    >
+      <div className="container-fluid ">
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <NavLink end to="/" className="nav-link">
-              Home
+              <i class="fa-solid fa-house"></i>
             </NavLink>
-            <NavLink to="courses" className="nav-link">
-              Courses
+            <NavLink end to="login" className="nav-link">
+              Login
+            </NavLink>
+            <NavLink end to="" className="nav-link">
+              Sign Up
             </NavLink>
 
-            {auth?.user && (
+            {/* {isAuthentificated?.user && (
               <NavLink to="profile" className="nav-link">
                 Profile
               </NavLink>
-            )}
-            <NavLink to={auth?.user ? "logout" : "login"} className="nav-link">
-              {auth?.user ? "Logout" : "Login"}
-            </NavLink>
+            )} */}
           </div>
         </div>
       </div>
