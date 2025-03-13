@@ -5,17 +5,20 @@ const initialState = {
     nom: "",
     prénom: "",
     score: "",
+    genre: "",
+    cin: "",
     isAuthentificated: false,
   },
+  currentQuestionIndex: 0,
   questions: [
     {
-      id: "",
-      text: "",
+      id: 1,
+      text: "Quel est le plus grand océan de la Terre ?",
       options: [
-        { id: "a", text: "HTTP", isCorrect: false },
-        { id: "b", text: "HTTPS", isCorrect: true },
-        { id: "c", text: "FTP", isCorrect: false },
-        { id: "d", text: "SMTP", isCorrect: false },
+        { id: "a", text: "Océan Atlantique", isCorrect: false },
+        { id: "b", text: "Océan Indien", isCorrect: false },
+        { id: "c", text: "Océan Pacifique", isCorrect: true },
+        { id: "d", text: "Océan Arctique", isCorrect: false },
       ],
       selectedOption: null,
     },
@@ -24,6 +27,16 @@ const initialState = {
 const quizSlice = createSlice({
   name: "quiz",
   initialState,
-  reducers: {},
+  reducers: {
+    userLogout: (state) => {
+      state.user.isAuthentificated = false;
+    },
+    updateUser: (state, action) => {
+      state.user = { ...state.user, ...action.payload };
+      state.user.isAuthentificated = true;
+      console.log(state.user);
+    },
+  },
 });
+export const { userLogin, userLogout, updateUser } = quizSlice.actions;
 export default quizSlice.reducer;

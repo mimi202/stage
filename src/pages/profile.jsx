@@ -1,4 +1,10 @@
-const profile = () => {
-  <h2>I'm </h2>;
+import { useSelector } from "react-redux";
+const Profile = () => {
+  const user = useSelector((state) => state.quiz.user);
+  return (
+    <h1>
+      Bienvenue {user?.nom} {user?.prénom}
+    </h1>
+  );
 };
-export default profile;
+export default Profile;

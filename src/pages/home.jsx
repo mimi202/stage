@@ -1,8 +1,28 @@
+import { Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 export default function Home() {
+  const user = useSelector((state) => state.quiz.user);
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    if (user.isAuthentificated) {
+      navigate("quiz");
+    } else {
+      navigate("login");
+    }
+  };
+
   return (
     <>
       <div className=" text-center">
-        <h1 style={{ fontFamily: "Arial, sans-serif", margin: "20px" }}>
+        <h1
+          style={{
+            fontFamily: "Arial, sans-serif",
+            margin: "15px",
+            color: "#212E53",
+          }}
+        >
           Welcome to the cyber security Quiz
         </h1>
       </div>
@@ -20,11 +40,14 @@ export default function Home() {
             style={{
               width: "500px",
               height: "400px",
-              border: "1px solid black",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               padding: "10px",
+              textAlign: "center",
+
+              fontFamily: "serif",
+              fontSize: "25px",
             }}
           >
             Testez vos connaissances sur les pratiques et les concepts
@@ -34,8 +57,12 @@ export default function Home() {
             compétences pour naviguer de manière plus sécurisée sur Internet.
           </span>
         </div>
-        <button className="btn btn-secondary d-block m-3  px-4 py-2 mx-auto">
-          Get started
+        <button
+          className="btn btn-secondary d-block m-3  px-4 py-2 mx-auto "
+          style={{ background: "#212E53" }}
+          onClick={handleNavigate}
+        >
+          Commencer le Quiz
         </button>
       </main>
     </>
