@@ -24,7 +24,14 @@ function App() {
             }
           />
           <Route path="login" element={<Login />} />
-          <Route path="commencerQuiz" element={<CommencerQuiz />} />
+          <Route
+            path="commencerQuiz"
+            element={
+              <ProtectedRoute>
+                <CommencerQuiz />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="quiz"
             element={

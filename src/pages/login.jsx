@@ -1,19 +1,12 @@
 import { useDispatch } from "react-redux";
 import { useRef, useState } from "react";
 import { updateUser } from "../redux/MySlice";
-import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.quiz.user);
-
-  const handleNavigate = () => {
-    if (user.isAuthentificated) {
-      navigate("quiz");
-    }
-  };
 
   const nomRef = useRef();
   const prenomRef = useRef();
@@ -30,7 +23,11 @@ function Login() {
 
     dispatch(updateUser(newUser));
   };
-
+  const handleNavigate = () => {
+    if (user.isAuthentificated) {
+      navigate("/commencerQuiz");
+    }
+  };
   return (
     <form action="" className="form w-50 mx-auto">
       <div className="form-group">
@@ -86,8 +83,10 @@ function Login() {
       </div>
       <div>
         <button
-          onClick={handleLogin}
-          type="submit"
+          onClick={(e) => {
+            handleLogin(e);
+            handleNavigate();
+          }}
           className="btn btn-success  d-block mx-auto px-4 my-4"
         >
           Connexion
