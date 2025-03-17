@@ -11,14 +11,14 @@ function Login() {
   const nomRef = useRef();
   const prenomRef = useRef();
   const [genre, setGenre] = useState("");
-  const cinRef = useRef();
+  const emailRef = useRef();
   const handleLogin = (e) => {
     e.preventDefault();
     const newUser = {
       nom: nomRef.current.value,
       prénom: prenomRef.current.value,
       genre: genre,
-      cin: cinRef.current.value,
+      email: emailRef.current.value,
     };
 
     dispatch(updateUser(newUser));
@@ -50,13 +50,13 @@ function Login() {
         />
       </div>
       <div className="form-group">
-        <label className="form-label ">Numéro CIN :</label>
+        <label className="form-label ">E-mail :</label>
         <input
-          id="cin"
-          type="text"
-          name="cin"
+          id="email"
+          type="email"
+          name="email"
           className="form-control my-2 "
-          ref={cinRef}
+          ref={emailRef}
         />
       </div>
       <div className="form-group  ">

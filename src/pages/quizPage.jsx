@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { onChooseAnswer, nextQuestion } from "../redux/MySlice";
+import { onChooseAnswer, nextQuestion, onValidate } from "../redux/MySlice";
 
 export default function Quiz() {
   const state = useSelector((state) => state.quiz);
@@ -9,36 +9,29 @@ export default function Quiz() {
   const currentQuestionIndex = state.currentQuestionIndex;
   const currentQuestion = state.questions[currentQuestionIndex];
   const options = currentQuestion.options;
-
+  const isValidate = currentQuestion.isValidate;
   const selectedOption = currentQuestion.selectedOption;
-  /* const handleBackground = (op) => {
-    let style = "none";
 
-    if (op) {
-      // const falseQuestions=currentQuestion.options.map((op)=>op.isClicked && op.isCorrect===false)
-      if (op.isCorrect === false && op.isClicked === true) {
-        style = "red";
-      } else if (op.isCorrect) {
-        style = "green";
-      }
-    }
-    return style;
-  }; */
+  const handlValidate = (currentQuestionIndex) => {
+    dispatch(onValidate(currentQuestionIndex));
+  };
 
   const handleOptionClick = (opId) => {
     dispatch(onChooseAnswer({ opId, currentQuestionIndex }));
   };
+
   const handleNextQuestion = () => {
     dispatch(nextQuestion());
   };
+
   if (isQuizFinished) {
     return (
-      <div className="pt-5  text-center">
+      <div className="pt-5 text-center">
         <h2>Le quiz est terminé !</h2>
         <h3 style={{ marginTop: "50px" }}>
           Votre score est :
           <b>
-            {score}/{state.questions.length}{" "}
+            {score}/{state.questions.length}
           </b>
         </h3>
       </div>
@@ -47,7 +40,7 @@ export default function Quiz() {
 
   return (
     <div style={{ paddingBottom: "500px" }}>
-      <h1 className="m-2 " style={{ color: "#212E53" }}>
+      <h1 className="m-2" style={{ color: "#212E53" }}>
         Quiz de Cybersécurité
       </h1>
       <div
@@ -64,52 +57,59 @@ export default function Quiz() {
         <h4 className="m-5">
           {state.questions[state.currentQuestionIndex].text}
         </h4>
-        {state.questions[state.currentQuestionIndex].options.map((op) => (
-          <>
-            <button
-              type="button"
-              className="btn btn-secondary d-block w-75 mx-auto"
-              key={op.id}
-              disabled={selectedOption !== null}
-              onClick={() => handleOptionClick(op.id)}
-              style={{
-                backgroundColor:
-                  selectedOption !== null
-                    ? op.isCorrect
-                      ? "green" // If the answer is correct, it will always be green
-                      : op.isClicked
-                      ? "red" // If the answer is clicked and incorrect, it will be red
-                      : "grey" // If the option is neither clicked nor correct, it will be grey
-                    : "#EBACA2",
-              }}
-            >
-              {op.text}
-            </button>
-            <br />
-          </>
-        ))}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "20px",
-          }}
-        >
+
+        {/* Liste des options avec des cases à cocher */}
+        {options.map((op) => {
+          let labelColor = "#fff";
+          let textColor = "#000";
+          if (isValidate) {
+            if (currentQuestion.correctAnswers.includes(op.id)) {
+              labelColor = "green"; // Réponse correcte (vert)
+              textColor = "#fff";
+            } else if (selectedOption.includes(op.id)) {
+              labelColor = "red"; // Mauvaise réponse sélectionnée (rouge)
+              textColor = "#fff";
+            }
+          }
+
+          return (
+            <div key={op.id} className="d-flex align-items-center w-75 mx-auto">
+              <input
+                id={`Q${op.id}`}
+                type="checkbox"
+                disabled={isValidate === true}
+                checked={selectedOption.includes(op.id)}
+                onChange={() => handleOptionClick(op.id)}
+                style={{ marginRight: "10px", transform: "scale(1.5)" }}
+              />
+              <label
+                htmlFor={`Q${op.id}`}
+                className="btn d-block w-100 my-3"
+                style={{ backgroundColor: labelColor }}
+              >
+                {op.text}
+              </label>
+            </div>
+          );
+        })}
+
+        {/* Bouton "Valider" */}
+        <div className="text-center mt-4">
           <button
-            style={{
-              border: "none",
-              backgroundColor: "#709CA7",
-              padding: "10px",
-              marginTop: "30px",
-              marginRight: "50px",
-            }}
-            disabled={selectedOption === null}
+            onClick={() => handlValidate(currentQuestionIndex)}
+            className="btn btn-primary"
+            disabled={selectedOption.length === 0}
           >
-            <i
-              className="fa-solid fa-arrow-right fa-4x"
-              title="Suivant"
-              onClick={handleNextQuestion}
-            ></i>
+            Valider
+          </button>
+        </div>
+        <div className="text-center mt-4">
+          <button
+            className="btn btn-primary"
+            onClick={() => handleNextQuestion()}
+            disabled={isValidate === false || selectedOption.length === 0}
+          >
+            Passer à la question suivante
           </button>
         </div>
       </div>
