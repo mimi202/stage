@@ -1,0 +1,743 @@
+[
+  {
+    "id": 1,
+    "text": "La RGPD est une loi marocaine concernée par la protection des données à caractère personnel.",
+    "options": [
+      { "id": "a", "text": "Vrai", "isCorrect": false, "isClicked": false },
+      { "id": "b", "text": "Faux", "isCorrect": true, "isClicked": false }
+    ],
+    "correctAnswers": ["b"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 2,
+    "text": "Que signifie la DGSSI ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "La direction générale de la santé des systèmes d’information",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "La direction générale de la sureté des systèmes d’information",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "La direction générale de la sécurité des systèmes d’information",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "La direction générale des sports des systèmes d’information",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["c"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 3,
+    "text": "La Loi 05-20 relative à la cybersécurité vise notamment à mettre en place :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Un cadre juridique préconisant un ensemble de règles et de mesures de sécurité afin d’assurer et renforcer la sécurité.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "La résilience des systèmes d’information des administrations de l’État.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Des infrastructures d’importance vitale disposant des systèmes d’information sensibles.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Une politique de la gestion d’accès à l’information.",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 4,
+    "text": "Lesquels de ces lois sont concernées par la protection des données à caractère personnel :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Loi 53-05",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Loi 02-00",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      { "id": "c", "text": "Loi 09-08", "isCorrect": true, "isClicked": false },
+      { "id": "d", "text": "Loi 07-03", "isCorrect": true, "isClicked": false }
+    ],
+    "correctAnswers": ["c", "d"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 5,
+    "text": "La loi 05-20 est une loi créée par quel organisme ?",
+    "options": [
+      { "id": "a", "text": "La RGPD", "isCorrect": false, "isClicked": false },
+      { "id": "b", "text": "La DGSSI", "isCorrect": true, "isClicked": false },
+      { "id": "c", "text": "L’ADD", "isCorrect": false, "isClicked": false },
+      { "id": "d", "text": "La CNDP", "isCorrect": false, "isClicked": false }
+    ],
+    "correctAnswers": ["b"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+
+  {
+    "id": 6,
+    "text": "Quel est l’objectif de la gestion des risques ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Déterminer la probabilité de survenue d'un risque donné",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Déterminer le préjudice causé par d’éventuels incidents de sécurité.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Donner un aperçu des menaces auxquelles les ressources informatiques sont exposées",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Exposées.",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 7,
+    "text": "La DSI du Ministère de l’éducation nationale marocaine doit déterminer les dangers auxquels son Datacenter est exposé pendant la période du Bac 2023. Comment nomme-t-on un évènement qui peut potentiellement avoir un effet perturbateur sur la fiabilité de l’information ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dépendance",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Menace",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Vulnérabilité",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Risque",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["b"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+
+  {
+    "id": 8,
+    "text": "La gestion des risques fait partie de quelle famille ISO :",
+    "options": [
+      {
+        "id": "a",
+        "text": "ISO 27002",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "ISO 22301",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "ISO 27001",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["c"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 9,
+    "text": "Parmi les exemples suivants, lequel peut être classifié en tant que fraude ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Infecter un ordinateur avec un virus.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Effectuer une transaction non autorisée.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Mettre sur écoute les lignes de communication et les réseaux.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Utiliser le service Internet du lieu de travail à des fins privées.",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["b"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 10,
+    "text": "Votre agent comptable vous a envoyé une ébauche de votre déclaration de revenus et vous vérifiez si les données sont correctes. Quel critère de fiabilité de l’information vérifiez-vous ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Intégrité",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Exclusivité",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Disponibilité",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Parmi les énoncés suivants, lequel est un exemple de menace humaine ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Une clé USB transmet un virus au réseau",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Une quantité de poussière excessive s'est accumulée dans la salle de réseau.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Une fuite provoque une panne de l’alimentation électrique.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Hameçonnage",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["d"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 13,
+    "text": "Le cycle de vie d’un incident se compose de quatre étapes successives. Dans quel ordre ces étapes se produisent-elles ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Menace, Préjudice, Incident, Reprise",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Menace, Incident, Préjudice, Reprise",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Incident, Menace, Préjudice, Reprise",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Incident, Reprise, Préjudice, Menace",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["b"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 14,
+    "text": "L’Organisation de la sécurité des systèmes d’information est basée sur deux conditions importantes : Nomination d’un RSSI et le comité de sécurité des systèmes d’information.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Vrai",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Faux",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+
+  {
+    "id": 15,
+    "text": "Parmi les technologies suivantes, laquelle est malveillante ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Cryptage",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Hachage",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Réseau privé virtuel (RPV)",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Virus, vers et logiciels espions",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["d"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+
+  {
+    "id": 16,
+    "text": "Parmi les énoncés suivants, lequel est un exemple de mesure organisationnelle ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Sauvegarde des données",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Cryptage",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Séparation des tâches",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Stockage du matériel du réseau et des boîtes de connexion dans une salle verrouillée",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["c"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+
+  {
+    "id": 17,
+    "text": "La responsable de la sécurité des systèmes d’information (RSSI) de la société WafaAssurance souhaite rédiger une liste répertoriant l'ensemble des mesures de sécurité. Que doit-elle faire avant de pouvoir sélectionner les mesures de sécurité ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Mettre en place un système de surveillance.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Effectuer une évaluation.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Élaborer une politique de sécurité de l’information.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Effectuer une analyse des risques.",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["d"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 18,
+    "text": "Parmi les énoncés suivants, lequel est un exemple de menace humaine ?",
+    "options": [
+      {
+        "id": "1",
+        "text": "Foudroiement",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "2",
+        "text": "Incendie",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "3",
+        "text": "Hameçonnage",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["3"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+
+  {
+    "id": 19,
+    "text": "Parmi les mesures de sécurité suivantes, laquelle est une mesure de sécurité technique ?",
+    "options": [
+      {
+        "id": "1",
+        "text": "Assigner des informations à un(e) propriétaire.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "2",
+        "text": "Crypter des fichiers",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "3",
+        "text": "Créer une politique définissant ce qui est autorisé et non autorisé dans un e-mail",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "4",
+        "text": "Stocker les mots de passe des gestionnaires du système dans un coffre-fort",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["2"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 20,
+    "text": "Au titre de quelle loi une personne peut-elle demander à inspecter les données qui ont été enregistrées à son sujet ?",
+    "options": [
+      {
+        "id": "1",
+        "text": "La Loi sur les documents publics",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "2",
+        "text": "La Loi sur la protection des données personnelles",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "3",
+        "text": "La Loi sur la criminalité informatique",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "4",
+        "text": "La Loi sur l’accès public aux documents gouvernementaux",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["2"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 21,
+    "text": "La fuite des données est définie comme :",
+    "options": [
+      {
+        "id": "1",
+        "text": "Une copie d’une base de données qui est piraté d’une structure de bases données source.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "2",
+        "text": "Une copie de base de données qui présente quelques données source de la base originale.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "3",
+        "text": "Une copie de la base de données qui présente des données non structurées",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["3"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 22,
+    "text": "Parmi les énoncés suivants, lequel décrit le mieux l’objectif d’une politique de sécurité de l’information ?",
+    "options": [
+      {
+        "id": "1",
+        "text": "Une politique documente l’analyse des risques et la recherche de contre-mesures.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "2",
+        "text": "Une politique fournit une orientation et un soutien à la direction en matière de sécurité de l’information.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "3",
+        "text": "Une politique concrétise le plan de sécurité en lui apportant les détails nécessaires.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "4",
+        "text": "Une politique fournit un aperçu des menaces et des conséquences éventuelles.",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["2"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+
+  {
+    "id": 23,
+    "text": "Pourquoi est-il nécessaire d’actualiser un plan de reprise après sinistre et de le tester régulièrement ?",
+    "options": [
+      {
+        "id": "1",
+        "text": "Afin de toujours avoir accès aux récentes sauvegardes qui sont situées à l’extérieur du bureau.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "2",
+        "text": "Afin d’être en mesure de prendre en charge les anomalies rencontrées quotidiennement.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "3",
+        "text": "Parce que dans le cas contraire, et en cas de perturbation à répercussions profondes, les mesures prises et les procédures de gestion des incidents prévues peuvent s'avérer inappropriées ou désuètes.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "4",
+        "text": "Parce que la Loi sur la protection des données personnelles l'impose.",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["3"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 24,
+    "text": "Le Code de bonnes pratiques pour la gestion de la sécurité de l’information (ISO/CEI 27002) est une description d’une méthode d’analyse des risques. Cette affirmation est-elle exacte ?",
+    "options": [
+      {
+        "id": "1",
+        "text": "Oui",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "2",
+        "text": "Non",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["2"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 25,
+    "text": "Vous êtes un consultant de la sécurité des systèmes d’information choisir les étapes importantes à mettre en place comme l’ordre de priorité pour réussir le lancement d’un audit de sécurité des systèmes d’information :",
+    "options": [
+      {
+        "id": "1",
+        "text": "Le responsable de la sécurité des systèmes d’information est l’interlocuteur de l’autorité nationale de la cybersécurité et doit jouir de l’indépendance requise pour l’application de sa mission.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "2",
+        "text": "Chaque entité doit régulièrement, auditer ses systèmes d’information.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "3",
+        "text": "Chaque entité doit veiller à ce que ses systèmes d’informations soient conforme aux directives, règles, règlements, référentiel ou recommandations, édictés par l’autorité nationale.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "4",
+        "text": "Les données sensibles doivent être exclusivement hébergés sur le territoire national.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "5",
+        "text": "Toute externalisation d’un système d’information sensible doit faire l’objet d’un contrat de droit marocain qui doit comprendre des engagements de protection de l’information, d’audibilité et réversibilité, ainsi que les exigences de sécurité édictée par les autorités nationales.",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["1", "3", "5"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 26,
+    "text": "Il s’agit de quelle loi à votre avis ?",
+    "options": [
+      {
+        "id": "1",
+        "text": "Loi 31-08",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "2",
+        "text": "Loi 09-08",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "3",
+        "text": "Loi 07-03",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "4",
+        "text": "LOI 05-20",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "5",
+        "text": "DNSSI",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["5"],
+    "isValidate": false,
+    "selectedOption": []
+  }
+]

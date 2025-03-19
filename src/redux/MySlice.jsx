@@ -1,59 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
+import data from "./questions_quiz_final.json";
 
 const initialState = {
   user: {
-    nom: "fatna",
-    prénom: "fadil",
+    nom: "",
+    prénom: "",
     score: 0,
-    genre: "f",
-    cin: "hj",
-    isAuthentificated: true,
+    genre: "",
+    email: "",
+    académie: "",
+    département: "",
+    responsabilité: "",
+    isAuthentificated: false,
   },
   currentQuestionIndex: 0,
-  questions: [
-    {
-      id: 1,
-      text: "Quel est le plus grand océan de la Terre ?",
-      options: [
-        {
-          id: "a",
-          text: "Océan Atlantique",
-          isCorrect: false,
-          isClicked: false,
-        },
-        { id: "b", text: "Océan Indien", isCorrect: false, isClicked: false },
-        { id: "c", text: "Océan Pacifique", isCorrect: true, isClicked: false },
-        { id: "d", text: "Océan Arctique", isCorrect: false, isClicked: false },
-      ],
-      correctAnswers: ["c", "d"],
-      isValidate: false,
-      selectedOption: [],
-    },
-    {
-      id: 2,
-      text: "Quel est l’élément chimique dont le symbole est O ?",
-      options: [
-        { id: "a", text: "Or", isCorrect: false, isClicked: false },
-        { id: "b", text: "Oxygène", isCorrect: true, isClicked: false },
-        { id: "c", text: "Osmium", isCorrect: false, isClicked: false },
-        { id: "d", text: "Ozone", isCorrect: false, isClicked: false },
-      ],
-      correctAnswers: ["b"],
-      selectedOption: [],
-      isValidate: false,
-    },
-    {
-      id: 3,
-      text: "Utiliser le même mot de passe pour plusieurs comptes est une bonne pratique de sécurité ?",
-      options: [
-        { id: "a", text: "vrai", isCorrect: false, isClicked: false },
-        { id: "b", text: "faux", isCorrect: true, isClicked: false },
-      ],
-      correctAnswers: ["b"],
-      selectedOption: [],
-      isValidate: false,
-    },
-  ],
+  questions: data,
+
   isQuizFinished: false,
 };
 
@@ -84,9 +46,6 @@ const quizSlice = createSlice({
 
       const currentQuestion = state.questions[currentQuestionIndex];
       currentQuestion.isValidate = true;
-      console.log(currentQuestion.isValidate);
-      console.log("state.questions:", state.questions);
-      console.log("currentQuestionIndex:", currentQuestionIndex);
 
       const isCorrect =
         currentQuestion.selectedOption.length ===

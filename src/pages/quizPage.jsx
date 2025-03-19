@@ -40,12 +40,12 @@ export default function Quiz() {
 
   return (
     <div style={{ paddingBottom: "500px" }}>
-      <h1 className="m-2" style={{ color: "#212E53" }}>
+      <h1 className="m-2" style={{ color: "#fff" }}>
         Quiz de Cybersécurité
       </h1>
       <div
         style={{
-          backgroundColor: "#709CA7",
+          backgroundColor: "#ccc",
           paddingBottom: "200px",
           border: "1px solid grey",
           borderRadius: "20px",
@@ -85,7 +85,7 @@ export default function Quiz() {
               <label
                 htmlFor={`Q${op.id}`}
                 className="btn d-block w-100 my-3"
-                style={{ backgroundColor: labelColor }}
+                style={{ backgroundColor: labelColor, color: textColor }}
               >
                 {op.text}
               </label>

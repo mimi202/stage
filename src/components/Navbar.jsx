@@ -10,7 +10,7 @@ export default function Navbar() {
       <div>
         <div
           style={{
-            backgroundColor: "#4A919E",
+            backgroundColor: "#f7f7f7",
             height: "120px",
 
             position: "sticky",
@@ -19,28 +19,26 @@ export default function Navbar() {
           }}
         >
           <img
-            src="images/tr.jpg"
+            src="images/logoM.jpg"
             alt="img"
-            style={{ width: "120px", height: "120px", marginRight: "8px" }}
-          />
-          <span
             style={{
-              fontFamily: "font-family: cursive",
+              width: "100%",
+              height: "120px",
+              marginRight: "8px",
+              objectFit: "contain",
             }}
-          >
-            Royaume du maroc Ministére de l'education nationale
-          </span>
+          />
         </div>
       </div>
       <nav
         className="navbar navbar-expand-lg    px-4"
-        style={{ backgroundColor: "#C5C5A9" }}
+        style={{ backgroundColor: "#eee" }}
       >
         <div className="container-fluid ">
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               <NavLink end to="/" className="nav-link">
-                <i className="fa-solid fa-house"></i>
+                Acceuil
               </NavLink>
               <NavLink end to="login" className="nav-link mx-3">
                 Connexion

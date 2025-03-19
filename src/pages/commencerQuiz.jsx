@@ -7,12 +7,14 @@ export default function CommencerQuiz() {
     navigate("/quiz");
   };
   return (
-    <button
-      className="btn btn primary mx-5 fs-5"
-      type="button"
-      onClick={handleNavigate}
-    >
-      Commencer maintenant
-    </button>
+    <div className="mx auto">
+      <button
+        className="btn btn-primary mx-5 fs-5"
+        type="button"
+        onClick={handleNavigate}
+      >
+        Commencer maintenant
+      </button>
+    </div>
   );
 }
