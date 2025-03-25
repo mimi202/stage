@@ -7,9 +7,9 @@ export default function CommencerQuiz() {
     navigate("/quiz");
   };
   return (
-    <div className="mx auto">
+    <div className="d-flex justify-content-center align-items-center vh-100">
       <button
-        className="btn btn-primary mx-5 fs-5"
+        className="btn btn-primary fs-5"
         type="button"
         onClick={handleNavigate}
       >

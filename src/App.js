@@ -7,9 +7,11 @@ import Logout from "./pages/logout";
 import ProtectedRoute from "./pages/protectedRoute";
 import QuizPage from "./pages/quizPage";
 import CommencerQuiz from "./pages/commencerQuiz";
+import Header from "./components/header";
 function App() {
   return (
     <>
+      {/* <Header /> */}
       <Navbar />
       <main className="container pt-3">
         <Routes>

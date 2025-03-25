@@ -72,7 +72,7 @@
         "isClicked": false
       }
     ],
-    "correctAnswers": ["a", "b", "c"],
+    "correctAnswers": ["a", "b", "c", "d"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -93,9 +93,9 @@
         "isClicked": false
       },
       { "id": "c", "text": "Loi 09-08", "isCorrect": true, "isClicked": false },
-      { "id": "d", "text": "Loi 07-03", "isCorrect": true, "isClicked": false }
+      { "id": "d", "text": "Loi 07-03", "isCorrect": false, "isClicked": false }
     ],
-    "correctAnswers": ["c", "d"],
+    "correctAnswers": ["c"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -199,11 +199,11 @@
       {
         "id": "c",
         "text": "ISO 27001",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       }
     ],
-    "correctAnswers": ["c"],
+    "correctAnswers": [],
     "isValidate": false,
     "selectedOption": []
   },
@@ -261,8 +261,82 @@
         "text": "Disponibilité",
         "isCorrect": false,
         "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Confidentialité",
+        "isCorrect": false,
+        "isClicked": false
       }
-    ]
+    ],
+    "correctAnswers": ["a"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 18,
+    "text": "Associez chaque exemple à la bonne notion de base de la loi 09-08.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Le contrôle d’accès aux locaux",
+        "category": "Notion de traitement",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "La gestion des Ressources Humaines",
+        "category": "Responsable du traitement",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Analyses médicales",
+        "category": "Données sensibles",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Université",
+        "category": "Responsable du traitement",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "e",
+        "text": "Ministère",
+        "category": "Responsable du traitement",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "f",
+        "text": "Hôpital",
+        "category": "Responsable du traitement",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "g",
+        "text": "Les patients",
+        "category": "Personne physique",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "h",
+        "text": "Les salariés",
+        "category": "Personne physique",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c", "d", "e", "f", "g", "h"],
+    "isValidate": false,
+    "selectedOption": []
   },
   {
     "id": 12,
@@ -271,7 +345,7 @@
       {
         "id": "a",
         "text": "Une clé USB transmet un virus au réseau",
-        "isCorrect": false,
+        "isCorrect": true,
         "isClicked": false
       },
       {
@@ -285,15 +359,9 @@
         "text": "Une fuite provoque une panne de l’alimentation électrique.",
         "isCorrect": false,
         "isClicked": false
-      },
-      {
-        "id": "d",
-        "text": "Hameçonnage",
-        "isCorrect": true,
-        "isClicked": false
       }
     ],
-    "correctAnswers": ["d"],
+    "correctAnswers": ["a"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -439,17 +507,17 @@
       {
         "id": "c",
         "text": "Élaborer une politique de sécurité de l’information.",
-        "isCorrect": false,
+        "isCorrect": true,
         "isClicked": false
       },
       {
         "id": "d",
         "text": "Effectuer une analyse des risques.",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       }
     ],
-    "correctAnswers": ["d"],
+    "correctAnswers": ["c"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -560,17 +628,17 @@
       {
         "id": "2",
         "text": "Une copie de base de données qui présente quelques données source de la base originale.",
-        "isCorrect": false,
+        "isCorrect": true,
         "isClicked": false
       },
       {
         "id": "3",
         "text": "Une copie de la base de données qui présente des données non structurées",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       }
     ],
-    "correctAnswers": ["3"],
+    "correctAnswers": ["2"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -621,7 +689,7 @@
       {
         "id": "2",
         "text": "Afin d’être en mesure de prendre en charge les anomalies rencontrées quotidiennement.",
-        "isCorrect": false,
+        "isCorrect": true,
         "isClicked": false
       },
       {
@@ -637,7 +705,7 @@
         "isClicked": false
       }
     ],
-    "correctAnswers": ["3"],
+    "correctAnswers": ["2", "3"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -675,7 +743,7 @@
       {
         "id": "2",
         "text": "Chaque entité doit régulièrement, auditer ses systèmes d’information.",
-        "isCorrect": false,
+        "isCorrect": true,
         "isClicked": false
       },
       {
@@ -687,7 +755,7 @@
       {
         "id": "4",
         "text": "Les données sensibles doivent être exclusivement hébergés sur le territoire national.",
-        "isCorrect": false,
+        "isCorrect": true,
         "isClicked": false
       },
       {
@@ -697,7 +765,7 @@
         "isClicked": false
       }
     ],
-    "correctAnswers": ["1", "3", "5"],
+    "correctAnswers": ["1", "2", "3", "4", "5"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -726,7 +794,7 @@
       {
         "id": "4",
         "text": "LOI 05-20",
-        "isCorrect": false,
+        "isCorrect": true,
         "isClicked": false
       },
       {
@@ -737,6 +805,500 @@
       }
     ],
     "correctAnswers": ["5"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 27,
+    "text": "Les Organes responsables de la sécurité des Systèmes d’information au Maroc sont :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Comité Stratégique de la Sécurité des Systèmes d’Information (CSSSI)",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Barid Al Maghrib (BAM) en tant que prestataire de services de certification électronique",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Direction Générale de la Sécurité des Systèmes d’Information (DGSSI)",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Agence Nationale de Réglementation des Télécommunications (ANRT)",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "e",
+        "text": "La direction générale de la sûreté nationale DGSN",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "f",
+        "text": "Commission nationale de protection des données personnelles (CNDP)",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c", "d", "f"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 28,
+    "text": "Le Maroc s’est doté, en 2012, d’une stratégie nationale en matière de cybersécurité articulée autour de 4 axes :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Évaluer les risques pesant sur les systèmes d’information au sein des administrations, organismes publics et infrastructures d’importance vitale.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Protéger et défendre les SI des administrations, organismes publics et infrastructures d’importance vitale.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Renforcer les fondements de la sécurité des SI.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Promouvoir la coopération nationale et internationale.",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c", "d"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 30,
+    "text": "Lesquels des réponses sont vrais au niveau de la loi 09-08 :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Données à caractère personnel",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Traitement",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Responsable du traitement",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Fichier de données à caractère personnel",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "e",
+        "text": "Données sensibles",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "f",
+        "text": "Personne concernée",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c", "d", "e", "f"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 31,
+    "text": "Les outils de la sécurité des systèmes d'information sont :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Les pare-feu",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      { "id": "b", "text": "Les VPN", "isCorrect": true, "isClicked": false },
+      {
+        "id": "c",
+        "text": "Les logiciels de détection d'intrusion",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Les antivirus",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c", "d"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 32,
+    "text": "Cochez les éléments qui rentrent dans le processus de gestion du risque en sécurité de l’information :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Identification de risque",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Identification de l’alerte",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Estimation de risque",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Évaluation de risque",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "e",
+        "text": "Appréciation de risque",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "c", "d", "e"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 33,
+    "text": "Quels sont les éléments qui font partie de l’audit technique de sécurité ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Audit des vulnérabilités infrastructure et système",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Audit architecture réseau",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Tests intrusion",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Audit Applicatif",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "e",
+        "text": "Configuration",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c", "d", "e"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 34,
+    "text": "Le système d’information (SI) est un ensemble de ressources et de dispositifs permettant de :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Collecter Stocker Traiter Diffuser",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Traiter Diffuser Collecter Stocker",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Collecter Diffuser Stocker Traiter",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Stocker Traiter Diffuser Collecter",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 35,
+    "text": "C’est quoi les avantages de la gestion des mots de passe ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Renforcer votre cyber sécurité",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Réduire les risques de pénétration aux bases de données",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Se conformer à la DNSSI",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Divulguer l’information",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 36,
+    "text": "Choisir les bonnes réponses à propos des mesures de sécurité d’un site web :",
+    "options": [
+      {
+        "id": "a",
+        "text": "La gestion des accès",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "La protection contre les injections SQL",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "La protection contre les injections XSS",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "L'authentification",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "e",
+        "text": "Le cryptage des données",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c", "d", "e"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 37,
+    "text": "Cochez sur les options de traitement des risques en sécurité de l’information lesquels :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Transfert du risque",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Réduction du risque",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Evitement du risque",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Maintien du risque",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c", "d"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 38,
+    "text": "La norme ISO 27002 constitue un code de bonnes pratiques. Quelle est la composition de cette norme ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Elle est composée de 121 mesures de sécurité réparties en 16 chapitres couvrant les domaines organisationnels et techniques.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Elle est composée de 115 mesures de sécurité réparties en 24 chapitres couvrant les domaines organisationnels et techniques.",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Elle est composée de 114 mesures de sécurité réparties en 14 chapitres couvrant les domaines organisationnels et techniques.",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Elle est composée de 134 mesures de sécurité réparties en 34 chapitres couvrant les domaines organisationnels et techniques.",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["c"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 39,
+    "text": "Qu’est-ce que la Conformité en Cyber-sécurité ?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Contrôle d'accès",
+        "isCorrect": false,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Contrôle du partage des données",
+        "isCorrect": false,
+        "isClicked": false
+      },
+
+      {
+        "id": "c",
+        "text": "Assurance d’une personne ou d’une organisation que les systèmes et les protocoles utilisés sont sécuritaires et se conforment à différentes normes, exigences et demandes.",
+        "isCorrect": true,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["d"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 40,
+    "text": "Les failles de la sécurité des systèmes d’information sont :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Les captures de mot de passe",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Les attaques sur serveur web",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Attaque de déni de service",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Evaluer le niveau de criticité de la faille",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 41,
+    "text": "Les Données Sensibles selon la loi sont :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Génétiques ou biométriques",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Concernant la santé ou l’orientation sexuelle",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Révélant l’origine prétendument raciale ou ethnique",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Portant sur les opinions des réseaux sociaux",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c"],
     "isValidate": false,
     "selectedOption": []
   }

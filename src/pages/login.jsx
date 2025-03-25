@@ -11,13 +11,33 @@ function Login() {
   const nomRef = useRef();
   const prenomRef = useRef();
   const emailRef = useRef();
-  const academieRef = useRef();
-  const departementRef = useRef();
   const responsabiliteRef = useRef();
   const [genre, setGenre] = useState("");
+  const [academie, setAcademie] = useState("");
+  const [departement, setDepartement] = useState("");
 
   // États pour gérer les erreurs
   const [errors, setErrors] = useState({});
+
+  // Objet des académies et départements associés
+  const academies = {
+    "AREF Rabat-Salé-Kénitra": ["Rabat", "Salé", "Kénitra", "Skhirate-Témara"],
+    "AREF Casablanca-Settat": [
+      "Casablanca",
+      "Settat",
+      "Mohammedia",
+      "El Jadida",
+    ],
+    "AREF Marrakech-Safi": ["Marrakech", "Safi", "Essaouira", "Youssoufia"],
+    "AREF Tanger-Tétouan-Al Hoceima": ["Tanger", "Tétouan", "Al Hoceima"],
+    "AREF Fès-Meknès": ["Fès", "Meknès", "Taza", "Sefrou"],
+    "AREF Oriental": ["Oujda", "Nador", "Berkane", "Jerada"],
+    "AREF Souss-Massa": ["Agadir", "Taroudant", "Tiznit"],
+    "AREF Béni Mellal-Khénifra": ["Béni Mellal", "Khénifra", "Azilal"],
+    "AREF Drâa-Tafilalet": ["Errachidia", "Ouarzazate", "Tinghir"],
+    "AREF Laâyoune-Sakia El Hamra": ["Laâyoune", "Boujdour"],
+    "AREF Dakhla-Oued Eddahab": ["Dakhla"],
+  };
 
   const validateForm = () => {
     let newErrors = {};
@@ -26,10 +46,8 @@ function Login() {
     if (!prenomRef.current.value) newErrors.prenom = "Le prénom est requis.";
     if (!emailRef.current.value) newErrors.email = "L'email est requis.";
     if (!genre) newErrors.genre = "Veuillez sélectionner un genre.";
-    if (!academieRef.current.value)
-      newErrors.academie = "Sélectionnez une académie.";
-    if (!departementRef.current.value)
-      newErrors.departement = "Sélectionnez un département.";
+    if (!academie) newErrors.academie = "Sélectionnez une académie.";
+    if (!departement) newErrors.departement = "Sélectionnez un département.";
     if (!responsabiliteRef.current.value)
       newErrors.responsabilite = "Sélectionnez une responsabilité.";
 
@@ -40,15 +58,15 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (!validateForm()) return; // Si erreurs, on arrête l'envoi
+    if (!validateForm()) return;
 
     const newUser = {
       nom: nomRef.current.value,
       prénom: prenomRef.current.value,
       genre: genre,
       email: emailRef.current.value,
-      académie: academieRef.current.value,
-      département: departementRef.current.value,
+      académie: academie,
+      département: departement,
       responsabilité: responsabiliteRef.current.value,
     };
 
@@ -111,11 +129,20 @@ function Login() {
 
       <div className="mb-3">
         <label className="form-label text-light">Académie AREF</label>
-        <select className="form-select" ref={academieRef}>
+        <select
+          className="form-select"
+          value={academie}
+          onChange={(e) => {
+            setAcademie(e.target.value);
+            setDepartement(""); // Réinitialiser le département lorsqu'on change d'académie
+          }}
+        >
           <option value="">-- Sélectionnez une académie --</option>
-          <option value="AREF1">Académie de Rabat-Salé-Kénitra</option>
-          <option value="AREF2">Académie de Casablanca-Settat</option>
-          <option value="AREF3">Académie de Marrakech-Safi</option>
+          {Object.keys(academies).map((key) => (
+            <option key={key} value={key}>
+              {key}
+            </option>
+          ))}
         </select>
         {errors.academie && (
           <span className="text-danger">{errors.academie}</span>
@@ -124,10 +151,19 @@ function Login() {
 
       <div className="mb-3">
         <label className="form-label text-light">Département Provincial</label>
-        <select className="form-select" ref={departementRef}>
+        <select
+          className="form-select"
+          value={departement}
+          onChange={(e) => setDepartement(e.target.value)}
+          disabled={!academie} // Désactiver le select si aucune académie n'est choisie
+        >
           <option value="">-- Sélectionnez un département --</option>
-          <option value="dep1">Province de Rabat</option>
-          <option value="dep2">Province de Salé</option>
+          {academie &&
+            academies[academie].map((dep) => (
+              <option key={dep} value={dep}>
+                {dep}
+              </option>
+            ))}
         </select>
         {errors.departement && (
           <span className="text-danger">{errors.departement}</span>
@@ -140,6 +176,15 @@ function Login() {
           <option value="">-- Sélectionnez une responsabilité --</option>
           <option value="directeur">Directeur</option>
           <option value="chef_service">Chef de service</option>
+          <option value="inspecteur_pedagogique">Inspecteur pédagogique</option>
+          <option value="enseignant">Enseignant</option>
+          <option value="coordinateur_academique">
+            Coordinateur académique
+          </option>
+          <option value="administrateur_scolaire">
+            Administrateur scolaire
+          </option>
+          <option value="autre">Autre</option>
         </select>
         {errors.responsabilite && (
           <span className="text-danger">{errors.responsabilite}</span>
