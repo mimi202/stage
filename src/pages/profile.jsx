@@ -1,37 +1,35 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateUser } from "../redux/MySlice"; // Assurez-vous que votre slice redux a une action updateUser
+import { updateUser } from "../redux/MySlice";
 
 function Profile() {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.quiz.user); // Récupérer l'utilisateur du store redux
+  const user = useSelector((state) => state.quiz.user);
 
-  // État local pour stocker les nouvelles valeurs de l'utilisateur
   const [nom, setNom] = useState(user.nom);
   const [prenom, setPrenom] = useState(user.prénom);
   const [email, setEmail] = useState(user.email);
   const [genre, setGenre] = useState(user.genre);
 
-  // Gérer la soumission du formulaire pour mettre à jour les informations de l'utilisateur
   const handleSubmit = (e) => {
     e.preventDefault();
     const updatedUser = { nom, prénom: prenom, genre, email };
-    dispatch(updateUser(updatedUser)); // Mettre à jour l'utilisateur dans Redux
+    dispatch(updateUser(updatedUser));
   };
 
   return (
     <div className="profile-container">
-      <h2 className="text-center text-light">
+      <h2 className="text-center ">
         Bienvenue {prenom} {nom}
       </h2>
-      <form onSubmit={handleSubmit} className="form w-50 mx-auto">
+      <form onSubmit={handleSubmit} className="form w-50 mx-auto shadow-5">
         <div className="form-group">
           <label className="form-label">Nom :</label>
           <input
             type="text"
-            className="form-control my-2"
+            className="form-control my-2 shadow-lg"
             value={nom}
-            onChange={(e) => setNom(e.target.value)} // Mettre à jour l'état local
+            onChange={(e) => setNom(e.target.value)}
             required
           />
         </div>
@@ -39,9 +37,9 @@ function Profile() {
           <label className="form-label">Prénom :</label>
           <input
             type="text"
-            className="form-control my-2"
+            className="form-control my-2 shadow-lg"
             value={prenom}
-            onChange={(e) => setPrenom(e.target.value)} // Mettre à jour l'état local
+            onChange={(e) => setPrenom(e.target.value)}
             required
           />
         </div>
@@ -49,9 +47,9 @@ function Profile() {
           <label className="form-label">E-mail :</label>
           <input
             type="email"
-            className="form-control my-2"
+            className="form-control my-2 shadow-lg"
             value={email}
-            onChange={(e) => setEmail(e.target.value)} // Mettre à jour l'état local
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
@@ -63,9 +61,9 @@ function Profile() {
                 type="radio"
                 name="genre"
                 value="Femme"
-                className="form-check-input mx-2"
+                className="form-check-input mx-2 shadow-lg"
                 checked={genre === "Femme"}
-                onChange={() => setGenre("Femme")} // Mettre à jour l'état local
+                onChange={() => setGenre("Femme")}
                 required
               />
               Femme
@@ -75,9 +73,9 @@ function Profile() {
                 type="radio"
                 name="genre"
                 value="Homme"
-                className="form-check-input mx-2"
+                className="form-check-input mx-2 shadow-lg"
                 checked={genre === "Homme"}
-                onChange={() => setGenre("Homme")} // Mettre à jour l'état local
+                onChange={() => setGenre("Homme")}
                 required
               />
               Homme

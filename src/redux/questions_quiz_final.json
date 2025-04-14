@@ -120,7 +120,7 @@
       {
         "id": "a",
         "text": "Déterminer la probabilité de survenue d'un risque donné",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       },
       {
@@ -132,7 +132,7 @@
       {
         "id": "c",
         "text": "Donner un aperçu des menaces auxquelles les ressources informatiques sont exposées",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       },
       {
@@ -142,7 +142,7 @@
         "isClicked": false
       }
     ],
-    "correctAnswers": ["a", "b", "c"],
+    "correctAnswers": ["b"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -201,9 +201,15 @@
         "text": "ISO 27001",
         "isCorrect": false,
         "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Aucune réponse n'est correcte",
+        "isCorrect": true,
+        "isClicked": false
       }
     ],
-    "correctAnswers": [],
+    "correctAnswers": ["d"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -274,67 +280,35 @@
     "selectedOption": []
   },
   {
-    "id": 18,
-    "text": "Associez chaque exemple à la bonne notion de base de la loi 09-08.",
+    "id": 11,
+    "text": "Les Données Sensibles selon la loi sont :",
     "options": [
       {
         "id": "a",
-        "text": "Le contrôle d’accès aux locaux",
-        "category": "Notion de traitement",
+        "text": "Génétiques ou biométriques",
         "isCorrect": true,
         "isClicked": false
       },
       {
         "id": "b",
-        "text": "La gestion des Ressources Humaines",
-        "category": "Responsable du traitement",
+        "text": "Concernant la santé ou l’orientation sexuelle",
         "isCorrect": true,
         "isClicked": false
       },
       {
         "id": "c",
-        "text": "Analyses médicales",
-        "category": "Données sensibles",
+        "text": "Révélant l’origine prétendument raciale ou ethnique",
         "isCorrect": true,
         "isClicked": false
       },
       {
         "id": "d",
-        "text": "Université",
-        "category": "Responsable du traitement",
-        "isCorrect": true,
-        "isClicked": false
-      },
-      {
-        "id": "e",
-        "text": "Ministère",
-        "category": "Responsable du traitement",
-        "isCorrect": true,
-        "isClicked": false
-      },
-      {
-        "id": "f",
-        "text": "Hôpital",
-        "category": "Responsable du traitement",
-        "isCorrect": true,
-        "isClicked": false
-      },
-      {
-        "id": "g",
-        "text": "Les patients",
-        "category": "Personne physique",
-        "isCorrect": true,
-        "isClicked": false
-      },
-      {
-        "id": "h",
-        "text": "Les salariés",
-        "category": "Personne physique",
-        "isCorrect": true,
+        "text": "Portant sur les opinions des réseaux sociaux",
+        "isCorrect": false,
         "isClicked": false
       }
     ],
-    "correctAnswers": ["a", "b", "c", "d", "e", "f", "g", "h"],
+    "correctAnswers": ["a", "b", "c"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -507,17 +481,17 @@
       {
         "id": "c",
         "text": "Élaborer une politique de sécurité de l’information.",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       },
       {
         "id": "d",
         "text": "Effectuer une analyse des risques.",
-        "isCorrect": false,
+        "isCorrect": true,
         "isClicked": false
       }
     ],
-    "correctAnswers": ["c"],
+    "correctAnswers": ["d"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -689,7 +663,7 @@
       {
         "id": "2",
         "text": "Afin d’être en mesure de prendre en charge les anomalies rencontrées quotidiennement.",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       },
       {
@@ -705,7 +679,7 @@
         "isClicked": false
       }
     ],
-    "correctAnswers": ["2", "3"],
+    "correctAnswers": ["3"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -782,7 +756,7 @@
       {
         "id": "2",
         "text": "Loi 09-08",
-        "isCorrect": false,
+        "isCorrect": true,
         "isClicked": false
       },
       {
@@ -794,17 +768,17 @@
       {
         "id": "4",
         "text": "LOI 05-20",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       },
       {
         "id": "5",
         "text": "DNSSI",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       }
     ],
-    "correctAnswers": ["5"],
+    "correctAnswers": ["2"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -821,7 +795,7 @@
       {
         "id": "b",
         "text": "Barid Al Maghrib (BAM) en tant que prestataire de services de certification électronique",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       },
       {
@@ -833,7 +807,7 @@
       {
         "id": "d",
         "text": "Agence Nationale de Réglementation des Télécommunications (ANRT)",
-        "isCorrect": true,
+        "isCorrect": false,
         "isClicked": false
       },
       {
@@ -849,7 +823,7 @@
         "isClicked": false
       }
     ],
-    "correctAnswers": ["a", "b", "c", "d", "f"],
+    "correctAnswers": ["a", "c", "f"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -883,6 +857,39 @@
       }
     ],
     "correctAnswers": ["a", "b", "c", "d"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+  {
+    "id": 29,
+    "text": "Les failles de la sécurité des systèmes d’information sont :",
+    "options": [
+      {
+        "id": "a",
+        "text": "Les captures de mot de passe",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "b",
+        "text": "Les attaques sur serveur web",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "c",
+        "text": "Attaque de déni de service",
+        "isCorrect": true,
+        "isClicked": false
+      },
+      {
+        "id": "d",
+        "text": "Evaluer le niveau de criticité de la faille",
+        "isCorrect": false,
+        "isClicked": false
+      }
+    ],
+    "correctAnswers": ["a", "b", "c"],
     "isValidate": false,
     "selectedOption": []
   },
@@ -1149,7 +1156,7 @@
       {
         "id": "a",
         "text": "Transfert du risque",
-        "isCorrect": false,
+        "isCorrect": true,
         "isClicked": false
       },
       {
@@ -1233,72 +1240,6 @@
       }
     ],
     "correctAnswers": ["d"],
-    "isValidate": false,
-    "selectedOption": []
-  },
-  {
-    "id": 40,
-    "text": "Les failles de la sécurité des systèmes d’information sont :",
-    "options": [
-      {
-        "id": "a",
-        "text": "Les captures de mot de passe",
-        "isCorrect": true,
-        "isClicked": false
-      },
-      {
-        "id": "b",
-        "text": "Les attaques sur serveur web",
-        "isCorrect": true,
-        "isClicked": false
-      },
-      {
-        "id": "c",
-        "text": "Attaque de déni de service",
-        "isCorrect": true,
-        "isClicked": false
-      },
-      {
-        "id": "d",
-        "text": "Evaluer le niveau de criticité de la faille",
-        "isCorrect": false,
-        "isClicked": false
-      }
-    ],
-    "correctAnswers": ["a", "b", "c"],
-    "isValidate": false,
-    "selectedOption": []
-  },
-  {
-    "id": 41,
-    "text": "Les Données Sensibles selon la loi sont :",
-    "options": [
-      {
-        "id": "a",
-        "text": "Génétiques ou biométriques",
-        "isCorrect": true,
-        "isClicked": false
-      },
-      {
-        "id": "b",
-        "text": "Concernant la santé ou l’orientation sexuelle",
-        "isCorrect": true,
-        "isClicked": false
-      },
-      {
-        "id": "c",
-        "text": "Révélant l’origine prétendument raciale ou ethnique",
-        "isCorrect": true,
-        "isClicked": false
-      },
-      {
-        "id": "d",
-        "text": "Portant sur les opinions des réseaux sociaux",
-        "isCorrect": false,
-        "isClicked": false
-      }
-    ],
-    "correctAnswers": ["a", "b", "c"],
     "isValidate": false,
     "selectedOption": []
   }

@@ -8,6 +8,9 @@ import store from "./redux/store";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { BrowserRouter } from "react-router-dom";
+// import "@fontsource/lato"; // avec fontsource
+// ou
+// import "https://fonts.googleapis.com/css2?family=Lato&display=swap"; // méthode Google Fonts
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

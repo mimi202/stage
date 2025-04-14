@@ -11,7 +11,7 @@ const initialState = {
     académie: "",
     département: "",
     responsabilité: "",
-    isAuthentificated: true,
+    isAuthentificated: false,
   },
   currentQuestionIndex: 0,
   questions: data,

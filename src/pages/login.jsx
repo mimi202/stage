@@ -76,48 +76,63 @@ function Login() {
 
   const handleNavigate = () => {
     if (user.isAuthentificated) {
-      navigate("/commencerQuiz");
+      navigate("/grtStarted");
     }
   };
 
   return (
-    <form className="form w-50 mx-auto">
+    <form
+      className="form w-50 mx-auto border  p-4 rounded  shadow"
+      style={{ backgroundColor: "#ccc" }}
+    >
       <div className="form-group">
-        <label className="form-label text-light">Nom :</label>
-        <input type="text" className="form-control my-2" ref={nomRef} />
+        <label className="form-label ">Nom :</label>
+        <input
+          type="text"
+          className="form-control my-2 shadow  "
+          ref={nomRef}
+        />
         {errors.nom && <span className="text-danger">{errors.nom}</span>}
       </div>
 
       <div>
-        <label className="form-label text-light">Prénom :</label>
-        <input type="text" className="form-control my-2" ref={prenomRef} />
+        <label className="form-label text-dark">Prénom :</label>
+        <input
+          type="text"
+          className="form-control my-2 shadow"
+          ref={prenomRef}
+        />
         {errors.prenom && <span className="text-danger">{errors.prenom}</span>}
       </div>
 
       <div className="form-group">
-        <label className="form-label text-light">E-mail :</label>
-        <input type="email" className="form-control my-2" ref={emailRef} />
+        <label className="form-label ">E-mail :</label>
+        <input
+          type="email"
+          className="form-control my-2 shadow"
+          ref={emailRef}
+        />
         {errors.email && <span className="text-danger">{errors.email}</span>}
       </div>
 
       <div className="form-group">
-        <label className="form-check-label text-light">
+        <label className="form-check-label ">
           <input
             type="radio"
             name="genre"
             value="Femme"
-            className="form-check-input mx-2 my-2"
+            className="form-check-input mx-2 my-2 shadow"
             onChange={(e) => setGenre(e.target.value)}
           />
           Femme
         </label>
 
-        <label className="form-check-label text-light">
+        <label className="form-check-label ">
           <input
             type="radio"
             name="genre"
             value="Homme"
-            className="form-check-input mx-2 my-2"
+            className="form-check-input mx-2 my-2 shadow"
             onChange={(e) => setGenre(e.target.value)}
           />
           Homme
@@ -128,9 +143,9 @@ function Login() {
       </div>
 
       <div className="mb-3">
-        <label className="form-label text-light">Académie AREF</label>
+        <label className="form-label ">Académie AREF</label>
         <select
-          className="form-select"
+          className="form-select shadow"
           value={academie}
           onChange={(e) => {
             setAcademie(e.target.value);
@@ -150,9 +165,9 @@ function Login() {
       </div>
 
       <div className="mb-3">
-        <label className="form-label text-light">Département Provincial</label>
+        <label className="form-label ">Département Provincial</label>
         <select
-          className="form-select"
+          className="form-select shadow"
           value={departement}
           onChange={(e) => setDepartement(e.target.value)}
           disabled={!academie} // Désactiver le select si aucune académie n'est choisie
@@ -171,8 +186,8 @@ function Login() {
       </div>
 
       <div className="mb-3">
-        <label className="form-label text-light">Responsabilité</label>
-        <select className="form-select" ref={responsabiliteRef}>
+        <label className="form-label ">Responsabilité</label>
+        <select className="form-select shadow" ref={responsabiliteRef}>
           <option value="">-- Sélectionnez une responsabilité --</option>
           <option value="directeur">Directeur</option>
           <option value="chef_service">Chef de service</option>
