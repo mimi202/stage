@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "text": "La RGPD est une loi marocaine concernée par la protection des données à caractère personnel.",
-    "options": [
-      { "id": "a", "text": "Vrai", "isCorrect": false, "isClicked": false },
-      { "id": "b", "text": "Faux", "isCorrect": true, "isClicked": false }
-    ],
-    "correctAnswers": ["b"],
-    "isValidate": false,
-    "selectedOption": []
-  },
-  {
     "id": 2,
     "text": "Que signifie la DGSSI ?",
     "options": [
@@ -43,6 +32,18 @@
     "isValidate": false,
     "selectedOption": []
   },
+  {
+    "id": 1,
+    "text": "La RGPD est une loi marocaine concernée par la protection des données à caractère personnel.",
+    "options": [
+      { "id": "a", "text": "Vrai", "isCorrect": false, "isClicked": false },
+      { "id": "b", "text": "Faux", "isCorrect": true, "isClicked": false }
+    ],
+    "correctAnswers": ["b"],
+    "isValidate": false,
+    "selectedOption": []
+  },
+
   {
     "id": 3,
     "text": "La Loi 05-20 relative à la cybersécurité vise notamment à mettre en place :",

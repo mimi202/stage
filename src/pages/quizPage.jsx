@@ -1,5 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import { onChooseAnswer, nextQuestion, onValidate } from "../redux/MySlice";
+import {
+  onChooseAnswer,
+  nextQuestion,
+  onValidate,
+  resetQuiz,
+} from "../redux/MySlice";
+import { useNavigate } from "react-router-dom";
 
 export default function Quiz() {
   const state = useSelector((state) => state.quiz);
@@ -11,9 +17,14 @@ export default function Quiz() {
   const options = currentQuestion.options;
   const isValidate = currentQuestion.isValidate;
   const selectedOption = currentQuestion.selectedOption;
+  const navigate = useNavigate();
 
   const handlValidate = (currentQuestionIndex) => {
     dispatch(onValidate(currentQuestionIndex));
+  };
+  const handleReplay = () => {
+    dispatch(resetQuiz());
+    navigate("/quiz");
   };
 
   const handleOptionClick = (opId) => {
@@ -31,7 +42,7 @@ export default function Quiz() {
           paddingTop: "50px",
           textAlign: "center",
           backgroundColor: "#F4F0E3",
-          height: "300px",
+          height: "400px",
           borderRadius: "10px",
         }}
         // className="pt-5 text-center bg bg-secondary h-75"
@@ -52,6 +63,13 @@ export default function Quiz() {
             ></i>
           )}
         </h3>
+        <p>Vous pouvez le refaire pour améliorer votre score.</p>
+        <button
+          onClick={handleReplay}
+          className=" btn btn-secondary mt-4 px-4 py-2 bg-blue-600 text-white rounded-xl"
+        >
+          Rejouer le quiz
+        </button>
       </div>
     );
   }

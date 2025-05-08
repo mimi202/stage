@@ -11,11 +11,11 @@ const initialState = {
     académie: "",
     département: "",
     responsabilité: "",
-    isAuthentificated: false,
+    isAuthentificated: true,
   },
   currentQuestionIndex: 0,
   questions: data,
-
+  timeLeft: 60 * 40,
   isQuizFinished: false,
 };
 
@@ -85,6 +85,11 @@ const quizSlice = createSlice({
         option.isClicked = currentQuestion.selectedOption.includes(option.id);
       });
     },
+    resetQuiz: (state) => {
+      state.currentQuestionIndex = 0;
+      state.score = 0;
+      state.isQuizFinished = false;
+    },
     nextQuestion: (state) => {
       if (state.currentQuestionIndex < state.questions.length - 1) {
         state.currentQuestionIndex += 1;
@@ -101,5 +106,6 @@ export const {
   nextQuestion,
   updateUser,
   onChooseAnswer,
+  resetQuiz,
 } = quizSlice.actions;
 export default quizSlice.reducer;

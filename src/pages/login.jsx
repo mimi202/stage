@@ -81,137 +81,146 @@ function Login() {
   };
 
   return (
-    <form
-      className="form w-50 mx-auto border  p-4 rounded  shadow"
-      style={{ backgroundColor: "#ccc" }}
-    >
-      <div className="form-group">
-        <label className="form-label ">Nom :</label>
-        <input
-          type="text"
-          className="form-control my-2 shadow  "
-          ref={nomRef}
-        />
-        {errors.nom && <span className="text-danger">{errors.nom}</span>}
-      </div>
+    <form className="container my-5" onSubmit={handleLogin}>
+      <div className="row justify-content-center">
+        <div className="col-12 col-md-10 col-lg-8 bg-light p-4 rounded shadow">
+          <h4 className="text-center mb-4">Formulaire de Connexion</h4>
 
-      <div>
-        <label className="form-label text-dark">Prénom :</label>
-        <input
-          type="text"
-          className="form-control my-2 shadow"
-          ref={prenomRef}
-        />
-        {errors.prenom && <span className="text-danger">{errors.prenom}</span>}
-      </div>
+          {/* Nom */}
+          <div className="mb-3">
+            <label className="form-label">Nom :</label>
+            <input type="text" className="form-control" ref={nomRef} />
+            {errors.nom && <span className="text-danger">{errors.nom}</span>}
+          </div>
 
-      <div className="form-group">
-        <label className="form-label ">E-mail :</label>
-        <input
-          type="email"
-          className="form-control my-2 shadow"
-          ref={emailRef}
-        />
-        {errors.email && <span className="text-danger">{errors.email}</span>}
-      </div>
+          {/* Prénom */}
+          <div className="mb-3">
+            <label className="form-label">Prénom :</label>
+            <input type="text" className="form-control" ref={prenomRef} />
+            {errors.prenom && (
+              <span className="text-danger">{errors.prenom}</span>
+            )}
+          </div>
 
-      <div className="form-group">
-        <label className="form-check-label ">
-          <input
-            type="radio"
-            name="genre"
-            value="Femme"
-            className="form-check-input mx-2 my-2 shadow"
-            onChange={(e) => setGenre(e.target.value)}
-          />
-          Femme
-        </label>
+          {/* Email */}
+          <div className="mb-3">
+            <label className="form-label">E-mail :</label>
+            <input type="email" className="form-control" ref={emailRef} />
+            {errors.email && (
+              <span className="text-danger">{errors.email}</span>
+            )}
+          </div>
 
-        <label className="form-check-label ">
-          <input
-            type="radio"
-            name="genre"
-            value="Homme"
-            className="form-check-input mx-2 my-2 shadow"
-            onChange={(e) => setGenre(e.target.value)}
-          />
-          Homme
-        </label>
-        {errors.genre && (
-          <span className="text-danger d-block">{errors.genre}</span>
-        )}
-      </div>
+          {/* Genre */}
+          <div className="mb-3">
+            <label className="form-label me-3">Genre :</label>
+            <br />
+            <div className="form-check form-check-inline">
+              <input
+                id="f"
+                type="radio"
+                name="genre"
+                value="Femme"
+                className="form-check-input"
+                onChange={(e) => setGenre(e.target.value)}
+              />
+              <label for="f" className="form-check-label">
+                Femme
+              </label>
+            </div>
+            <div className="form-check form-check-inline">
+              <input
+                id="h"
+                type="radio"
+                name="genre"
+                value="Homme"
+                className="form-check-input"
+                onChange={(e) => setGenre(e.target.value)}
+              />
+              <label for="h" className="form-check-label">
+                Homme
+              </label>
+            </div>
+            {errors.genre && <div className="text-danger">{errors.genre}</div>}
+          </div>
 
-      <div className="mb-3">
-        <label className="form-label ">Académie AREF</label>
-        <select
-          className="form-select shadow"
-          value={academie}
-          onChange={(e) => {
-            setAcademie(e.target.value);
-            setDepartement(""); // Réinitialiser le département lorsqu'on change d'académie
-          }}
-        >
-          <option value="">-- Sélectionnez une académie --</option>
-          {Object.keys(academies).map((key) => (
-            <option key={key} value={key}>
-              {key}
-            </option>
-          ))}
-        </select>
-        {errors.academie && (
-          <span className="text-danger">{errors.academie}</span>
-        )}
-      </div>
+          {/* Académie */}
+          <div className="mb-3">
+            <label className="form-label">Académie AREF :</label>
+            <select
+              className="form-select"
+              value={academie}
+              onChange={(e) => {
+                setAcademie(e.target.value);
+                setDepartement("");
+              }}
+            >
+              <option value="">-- Sélectionnez une académie --</option>
+              {Object.keys(academies).map((key) => (
+                <option key={key} value={key}>
+                  {key}
+                </option>
+              ))}
+            </select>
+            {errors.academie && (
+              <span className="text-danger">{errors.academie}</span>
+            )}
+          </div>
 
-      <div className="mb-3">
-        <label className="form-label ">Département Provincial</label>
-        <select
-          className="form-select shadow"
-          value={departement}
-          onChange={(e) => setDepartement(e.target.value)}
-          disabled={!academie} // Désactiver le select si aucune académie n'est choisie
-        >
-          <option value="">-- Sélectionnez un département --</option>
-          {academie &&
-            academies[academie].map((dep) => (
-              <option key={dep} value={dep}>
-                {dep}
+          {/* Département */}
+          <div className="mb-3">
+            <label className="form-label">Département Provincial :</label>
+            <select
+              className="form-select"
+              value={departement}
+              onChange={(e) => setDepartement(e.target.value)}
+              disabled={!academie}
+            >
+              <option value="">-- Sélectionnez un département --</option>
+              {academie &&
+                academies[academie].map((dep) => (
+                  <option key={dep} value={dep}>
+                    {dep}
+                  </option>
+                ))}
+            </select>
+            {errors.departement && (
+              <span className="text-danger">{errors.departement}</span>
+            )}
+          </div>
+
+          {/* Responsabilité */}
+          <div className="mb-3">
+            <label className="form-label">Responsabilité :</label>
+            <select className="form-select" ref={responsabiliteRef}>
+              <option value="">-- Sélectionnez une responsabilité --</option>
+              <option value="directeur">Directeur</option>
+              <option value="chef_service">Chef de service</option>
+              <option value="inspecteur_pedagogique">
+                Inspecteur pédagogique
               </option>
-            ))}
-        </select>
-        {errors.departement && (
-          <span className="text-danger">{errors.departement}</span>
-        )}
-      </div>
+              <option value="enseignant">Enseignant</option>
+              <option value="coordinateur_academique">
+                Coordinateur académique
+              </option>
+              <option value="administrateur_scolaire">
+                Administrateur scolaire
+              </option>
+              <option value="autre">Autre</option>
+            </select>
+            {errors.responsabilite && (
+              <span className="text-danger">{errors.responsabilite}</span>
+            )}
+          </div>
 
-      <div className="mb-3">
-        <label className="form-label ">Responsabilité</label>
-        <select className="form-select shadow" ref={responsabiliteRef}>
-          <option value="">-- Sélectionnez une responsabilité --</option>
-          <option value="directeur">Directeur</option>
-          <option value="chef_service">Chef de service</option>
-          <option value="inspecteur_pedagogique">Inspecteur pédagogique</option>
-          <option value="enseignant">Enseignant</option>
-          <option value="coordinateur_academique">
-            Coordinateur académique
-          </option>
-          <option value="administrateur_scolaire">
-            Administrateur scolaire
-          </option>
-          <option value="autre">Autre</option>
-        </select>
-        {errors.responsabilite && (
-          <span className="text-danger">{errors.responsabilite}</span>
-        )}
+          {/* Bouton */}
+          <div className="text-center">
+            <button className="btn btn-success px-5 mt-3" type="submit">
+              Connexion
+            </button>
+          </div>
+        </div>
       </div>
-
-      <button
-        onClick={handleLogin}
-        className="btn btn-success d-block mx-auto px-4 my-4"
-      >
-        Connexion
-      </button>
     </form>
   );
 }
