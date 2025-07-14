@@ -8,6 +8,7 @@ import QuizPage from "./pages/quizPage";
 import Start from "./pages/grtStarted";
 import "./App.css";
 import Role from "./pages/admin/role";
+import AdminLogin from "./pages/adminLogin"; 
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="grtStarted" element={<Start />} />
           <Route path="role" element={<Role />} />
-          <Route path="admin-login" element={<adminLogin />} />
+          <Route path="admin-login" element={<AdminLogin />} />
         </Routes>
       </main>
     </>
@@ -30,26 +31,3 @@ function App() {
 }
 
 export default App;
-
-/* import React, { useState, useEffect } from "react";
-
-function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    // Faire une requête GET vers l'API Express
-    fetch("http://localhost:5000/api/message")
-      .then((response) => response.json())
-      .then((data) => setMessage(data.message))
-      .catch((error) => console.error("Erreur:", error));
-  }, []);
-
-  return (
-    <div className="App">
-      <h1>React et Express</h1>
-      <p>{message}</p>
-    </div>
-  );
-} */
-
-// export default App;
