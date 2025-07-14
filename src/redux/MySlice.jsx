@@ -3,6 +3,7 @@ import data from "./questions_quiz_final.json";
 
 const initialState = {
   user: {
+    id: null,
     nom: "",
     prénom: "",
     score: 0,
@@ -12,6 +13,8 @@ const initialState = {
     département: "",
     responsabilité: "",
     isAuthentificated: false,
+    role: null,
+    user: null
   },
   currentQuestionIndex: 0,
   questions: data,
@@ -25,10 +28,15 @@ const quizSlice = createSlice({
   reducers: {
     userLogout: (state) => {
       state.user.isAuthentificated = false;
+      state.user.role = null;
+      state.user.user = null;
+      // Réinitialiser le quiz
+      state.currentQuestionIndex = 0;
+      state.isQuizFinished = false;
+      state.user.score = 0;
     },
     updateUser: (state, action) => {
       state.user = { ...state.user, ...action.payload };
-      state.user.isAuthentificated = true;
     },
     onValidate: (state, action) => {
       const currentQuestionIndex = action.payload;
@@ -87,8 +95,16 @@ const quizSlice = createSlice({
     },
     resetQuiz: (state) => {
       state.currentQuestionIndex = 0;
-      state.score = 0;
+      state.user.score = 0;
       state.isQuizFinished = false;
+      // Réinitialiser les questions
+      state.questions.forEach(question => {
+        question.isValidate = false;
+        question.selectedOption = [];
+        question.options.forEach(option => {
+          option.isClicked = false;
+        });
+      });
     },
     nextQuestion: (state) => {
       if (state.currentQuestionIndex < state.questions.length - 1) {

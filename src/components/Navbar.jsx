@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { authService } from "../services/api";
+import { userLogout } from "../redux/MySlice";
 
 export default function Navbar() {
   const isAuthentificated = useSelector(
@@ -8,9 +10,16 @@ export default function Navbar() {
   );
   const user = useSelector((state) => state.quiz.user);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleNavigate = () => {
     navigate(user.isAuthentificated ? "quiz" : "login");
+  };
+  
+  const handleLogout = () => {
+    authService.logout();
+    dispatch(userLogout());
+    navigate("/");
   };
 
   return (
@@ -60,11 +69,25 @@ export default function Navbar() {
                 </NavLink>
               </li>
               {isAuthentificated && (
-                <li className="nav-item">
-                  <NavLink to="profile" className="nav-link text-white">
-                    <i className="fas fa-user me-1"></i> Profil
-                  </NavLink>
-                </li>
+                <>
+                  <li className="nav-item">
+                    <NavLink to="profile" className="nav-link text-white">
+                      <i className="fas fa-user me-1"></i> Profil
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="resources" className="nav-link text-white">
+                      <i className="fas fa-book me-1"></i> Ressources
+                    </NavLink>
+                  </li>
+                  {user.user?.role === 'ADMIN' && (
+                    <li className="nav-item">
+                      <NavLink to="admin" className="nav-link text-white">
+                        <i className="fas fa-cog me-1"></i> Administration
+                      </NavLink>
+                    </li>
+                  )}
+                </>
               )}
               {!isAuthentificated ? (
                 <li className="nav-item">
@@ -74,9 +97,13 @@ export default function Navbar() {
                 </li>
               ) : (
                 <li className="nav-item">
-                  <NavLink to="logout" className="nav-link text-white">
+                  <button 
+                    className="nav-link text-white btn btn-link"
+                    onClick={handleLogout}
+                    style={{ border: 'none', background: 'none' }}
+                  >
                     <i className="fas fa-sign-out-alt me-1"></i> Déconnexion
-                  </NavLink>
+                  </button>
                 </li>
               )}
               <li className="nav-item">
